@@ -37,20 +37,17 @@ const synadVene = [
 
 function randomSyna() {
     const juhuslikSyna = Math.floor(Math.random() * synadEst.length);
-    const syna = synadEst[juhuslikSyna];
-    document.getElementById("random-syna").innerHTML = syna;
-
-    return juhuslikSyna;
+    currentSyna = synadEst[juhuslikSyna];
+    document.getElementById("random-syna").innerHTML = currentSyna;
 }
 
-function kontrollimine() {
-    const juhuslikSyna = randomSyna();
-    const ansVene = document.getElementById("kontroll").value;
-    const synaVene = synadVene[juhuslikSyna];
+function kontroll() {
+    const inputValue = document.getElementById("kontroll").value;
+    const index = synadEst.indexOf(currentSyna);
 
-    if (ansVene === synaVene) {
-        document.getElementById("kontrollDiv").innerHTML = "Õige";
+    if (synadVene[index] === inputValue) {
+        document.getElementById("kontrollDiv").innerText = "õigus";
     } else {
-        document.getElementById("kontrollDiv").innerHTML = "Vale";
+        document.getElementById("kontrollDiv").innerText = "vale";
     }
 }
