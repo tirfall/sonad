@@ -4,15 +4,39 @@
     <meta charset="UTF-8">
     <title>Tarkvara sõnad</title>
     <script src="tarkvaraScript.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Tarkvara sõnad</h1>
-<input type="button" value="Juhuslik sõna" onclick="randomSyna()">
-<br>
-<br>
-<div id="random-syna"></div>
-<label for="kontroll">Kijuta sõna vene keeles</label>
-<input type="text" id="kontroll" onchange="kontroll()">
-<div id="kontrollDiv"></div>
+<table border="1">
+    <tr>
+        <th>Eesti -> Vene</th>
+        <th>Vene -> Eesti</th>
+    </tr>
+    <tr>
+        <td><input type="button" value="Juhuslik sõna" onclick="randomSyna()"></td>
+        <td><input type="button" value="Juhuslik sõna" onclick="randomSynaVene()"></td>
+    </tr>
+    <tr>
+        <td><div id="random-syna"><br></div></td>
+        <td><div id="random-synaVene"><br></div></td>
+    </tr>
+    <tr>
+        <td>
+            <label for="kontroll">Kijuta sõna vene keeles</label>
+            <br>
+            <input type="text" id="kontroll" onchange="kontroll()">
+        </td>
+        <td>
+            <label for="kontrollVene">Kijuta sõna vene keeles</label>
+            <br>
+            <input type="text" id="kontrollVene" onchange="kontrollVene()">
+        </td>
+    </tr>
+    <tr>
+        <td><div id="kontrollDiv"><br></div></td>
+        <td><div id="kontrollDivVene"><br></div></td>
+    </tr>
+</table>
 </body>
 </html>
