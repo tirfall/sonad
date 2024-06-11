@@ -1,3 +1,4 @@
+// Definitsioonid kahe sõnade massiivide jaoks: üks eesti keeles ja teine vene keeles
 const synadEst =[
     'teostus',
     'algoritm',
@@ -32,16 +33,16 @@ const synadVene = [
     'итерация',
     'исправление'
 ];
-let currentSyna = '';
+let currentSyna = ''; // Muutuja hetkel kuvatava sõna hoidmiseks
 //random sõna - arv
 
-
+// Funktsioon juhusliku sõna valimiseks eesti sõnade massiivist ja kuvamiseks
 function randomSyna() {
     const juhuslikSyna = Math.floor(Math.random() * synadEst.length);
     currentSyna = synadEst[juhuslikSyna];
     document.getElementById("random-syna").innerHTML = currentSyna;
 }
-
+// Funktsioon, mis kontrollib kasutaja sisendit ja võrdleb seda õige tõlkega
 function kontroll() {
     const inputValue = document.getElementById("kontroll").value;
     const index = synadEst.indexOf(currentSyna);
@@ -52,13 +53,13 @@ function kontroll() {
         document.getElementById("kontrollDiv").innerText = "vale";
     }
 }
-
+// Funktsioon juhusliku sõna valimiseks vene sõnade massiivist ja kuvamiseks
 function randomSynaVene() {
     const juhuslikSyna = Math.floor(Math.random() * synadVene.length);
     currentSyna = synadVene[juhuslikSyna];
     document.getElementById("random-synaVene").innerHTML = currentSyna;
 }
-
+// Funktsioon, mis kontrollib kasutaja sisendit ja võrdleb seda õige tõlkega
 function kontrollVene() {
     const inputValue = document.getElementById("kontrollVene").value;
     const index = synadVene.indexOf(currentSyna);
