@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Tarkvara sõnad</title>
+    <!-- Lisab JavaScript-faili -->
     <script src="tarkvaraScript.js"></script>
+    <!-- Lisab CSS-faili -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Tarkvara sõnad</h1>
+    <!-- Lood tabeli, mis sisaldab kahte rida -->
 <table border="1">
     <tr>
         <th>Eesti -> Vene</th>
         <th>Vene -> Eesti</th>
     </tr>
     <tr>
+        
         <td><input type="button" value="Juhuslik sõna" onclick="randomSyna()"></td>
+        
         <td><input type="button" value="Juhuslik sõna" onclick="randomSynaVene()"></td>
     </tr>
     <tr>
+        <!-- Kuvab juhusliku sõna eesti keeles -->
         <td><div id="random-syna"><br></div></td>
+        <!-- Kuvab juhusliku sõna vene keeles -->
         <td><div id="random-synaVene"><br></div></td>
     </tr>
     <tr>
@@ -28,12 +35,14 @@
             <input type="text" id="kontroll" onchange="kontroll()">
         </td>
         <td>
+            <!-- Tekstiväli sisendi kontrollimiseks -->
             <label for="kontrollVene">Kijuta sõna vene keeles</label>
             <br>
             <input type="text" id="kontrollVene" onchange="kontrollVene()">
         </td>
     </tr>
     <tr>
+        <!-- Kuvab kontrolli tulemuse -->
         <td><div id="kontrollDiv"><br></div></td>
         <td><div id="kontrollDivVene"><br></div></td>
     </tr>
